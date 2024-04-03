@@ -8,8 +8,17 @@ export default defineNuxtConfig({
         {
           name: 'viewport',
           content: 'width=device-width,initial-scale=0.8,maximum-scale=0.8,user-scaleable=no,viewport-fit=cover'
-        }
-      ]
+        },
+      ],
     }
-  }
+  },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+  css: [
+    '~/assets/css/tailwind.css'
+  ]
 })
